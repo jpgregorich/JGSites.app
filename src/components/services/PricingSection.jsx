@@ -1,0 +1,15 @@
+import { Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const included = ['Fully custom colors, typography, layout, and branding', 'Multiple pages as needed for your business', 'Responsive design for phones, tablets, and desktop', 'Business information and service content', 'Contact forms and clear calls-to-action', 'Basic SEO setup, domain connection, and deployment assistance', 'Two revision rounds before launch', 'Ownership of the finished website'];
+
+export default function PricingSection() {
+  return <section id="pricing" className="section-space"><div className="site-container">
+    <div className="grid gap-8 md:grid-cols-[.7fr_1.3fr]"><p className="eyebrow text-navy">One clear offer</p><div><h2 className="font-heading text-4xl md:text-5xl">Custom design. Simple pricing.</h2><p className="mt-5 max-w-2xl text-lg leading-8 text-ink/65">Everything your business needs for a professional website, with the design and technical setup handled personally by Joey.</p></div></div>
+    <article className="mt-14 grid gap-10 border border-navy bg-sand/40 p-7 md:grid-cols-2 md:p-10">
+      <div><p className="eyebrow text-navy">Custom business website</p><h3 className="mt-5 font-heading text-3xl">Built specifically for your business.</h3><p className="mt-7"><strong className="font-heading text-5xl">$799</strong><span className="ml-3 text-sm text-ink/60">One-time price</span></p><p className="mt-5 max-w-md leading-7 text-ink/65">Start with a conversation, not a down payment. Review your website before approval and payment, then receive ownership of the finished site.</p><Link className="button-primary mt-7" to="/contact">Get a Free Website Review</Link></div>
+      <ul className="grid content-start gap-4 border-t border-ink/15 pt-7 md:border-l md:border-t-0 md:pl-8 md:pt-0">{included.map(item => <li className="flex gap-3 text-sm leading-6" key={item}><Check className="mt-1 h-4 w-4 shrink-0 text-navy" />{item}</li>)}</ul>
+    </article>
+    <div className="mt-8 border-y border-ink/20 py-7 text-center"><p className="font-heading text-2xl">Your website. No required JGSites subscription.</p><p className="mt-2 text-ink/65">Ownership transfers after approval and payment. Future help is available when you need it, without an ongoing commitment.</p></div>
+  </div></section>;
+}
