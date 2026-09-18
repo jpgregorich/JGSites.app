@@ -1,0 +1,9 @@
+const services=[
+['01','Custom web design','Your brand, services, customers, and goals shape the design. Colors, typography, layout, and page content are created around your individual business.'],
+['02','Mobile-friendly design','Clear navigation, readable content, and layouts that work across phones, tablets, and desktop screens.'],
+['03','Website setup','JGSites handles deployment and helps connect your domain, with basic search setup included. You do not need to work through the technical details alone.'],
+['04','Contact & inquiries','Contact forms, clear calls-to-action, and easy-to-find business information help customers take the next step.'],
+['05','Website ownership','After approval and payment, ownership of the finished website is transferred to your business. There is no required monthly JGSites subscription.'],
+['06','Website redesigns','Already have a website that feels outdated, loads slowly, or doesn\u2019t work well on phones? JGSites redesigns existing sites into a modern, professional version\u2014starting at $399.'],
+['07','Optional future changes','If you need help after launch, one-off website updates start at $99. Larger additions are quoted separately. Ongoing service is optional, not a requirement.']];
+export default function ServiceList(){return <section className="section-space"><div className="site-container border-t border-ink/20">{services.map(([n,t,d])=><article key={n} className="grid gap-5 border-b border-ink/20 py-10 md:grid-cols-[.2fr_.65fr_1fr]"><span className="text-sm text-navy">{n}</span><h2 className="font-heading text-3xl capitalize">{t}</h2><p className="max-w-2xl leading-7 text-ink/65">{d}</p></article>)}</div></section>}
