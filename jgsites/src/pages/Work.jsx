@@ -1,5 +1,0 @@
-import PageHero from '@/components/PageHero';
-import ProjectCard from '@/components/ProjectCard';
-import { projects } from '@/components/projectData';
-import FinalCta from '@/components/FinalCta';
-export default function Work(){return <><PageHero eyebrow="Selected work" title="Websites designed to make good businesses look the part.">Every website is designed around the business it represents. These selected concept projects show a few of the styles, layouts, and directions JGSites can create—not a catalog to choose from. Each is an independent design study, not commissioned client work.</PageHero><section className="section-space"><div className="site-container grid gap-20">{projects.map((p,i)=><div key={p.slug} className={i%2?'md:ml-[10%]':''}><ProjectCard project={p}/></div>)}</div></section><section className="border-t border-ink/10 bg-sand"><div className="site-container py-10 text-sm text-ink/60"><strong className="text-ink">Project classifications:</strong> Client Project identifies commissioned work. Concept Project identifies independent, uncommissioned design exploration.</div></section><FinalCta/></>}
